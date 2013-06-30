@@ -1,4 +1,4 @@
-templates
+Templates
 =========
 
-templates
+Some basic templates that I use.
