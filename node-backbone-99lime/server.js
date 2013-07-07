@@ -7,11 +7,15 @@ var app = express();
 /**
  * Return the html files.
  */
-app.use(express.static("public"));
+app.configure(function() {
+    app.use(express.static("public"));
+    app.use(express.bodyParser());  // needed for post 
+});
 //
 // Routes!
 //
 app.get('/rest/*', player.list);
+app.post('/post', player.post);
 //
 // Start server.
 //

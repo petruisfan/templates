@@ -7,3 +7,8 @@ exports.list = function(req, res) {
     res.send(result);
 };
 
+exports.post = function(req, res) {
+    var json = req.body;
+    console.log(json);
+}
+
