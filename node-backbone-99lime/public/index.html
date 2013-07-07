@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>Webplayer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="style/kickstart/kickstart.css" media="all" />
+    <link rel="stylesheet" href="style/kickstart/style.css" media="all" />
+</head>
+<body>
+
+<nav class="navbar">
+<a class="hide-phone" id="logo" href="http://www.99lime.com"><i class="icon-angle-right"></i> 99<span>Lime</span></a>
+<ul>
+<li><a href="http://www.99lime.com/elements/"><span>HTML</span>KickStart</a></li>
+<li><a href="http://www.99lime.com/uikit/"><span>UI</span>KIT</a></li>
+<li><a href="http://www.99lime.com/blog/">Blog</a></li>
+</ul>
+</nav>
+
+<div class="callout callout-top clearfix">
+    <div class="grid">
+        <h1>HTML KickStart</h1>
+        <h4>Ultra–Lean HTML5, CSS, & JS Building Blocks<br />for Rapid Website Production</h4>
+    </div>
+</div>
+
+<div class="grid">
+<!-- Table -->
+<table cellspacing="0" cellpadding="0">
+<thead><tr>
+    <th>Item1</th>
+    <th>Item2</th>
+    <th>Item3</th>
+</tr></thead>
+<tbody><tr>
+    <td>Item1</td>
+    <td>Item2</td>
+    <td>Item3</td>
+</tr><tr>
+    <td>Item1</td>
+    <td>Item2</td>
+    <td>Item3</td>
+</tr><tr>
+    <td>Item1</td>
+    <td>Item2</td>
+    <td>Item3</td>
+</tr><tr>
+    <td>Item1</td>
+    <td>Item2</td>
+    <td>Item3</td>
+</tr></tbody>
+</table>
+</div>
+
+<div class="grid">
+<!-- Menu Horizontal -->
+<ul class="menu">
+<li class="current"><a href="">Item 1</a></li>
+<li><a href="">Item 2</a></li>
+<li><a href=""><i class="icon-inbox"></i> Item 3</a>
+    <ul>
+    <li><a href=""><i class="icon-cog"></i> Sub Item</a></li>
+    <li><a href=""><i class="icon-envelope-alt"></i> Sub Item</a>
+        <ul>
+        <li><a href=""><i class="icon-wrench"></i> Sub Item</a></li>
+        <li><a href=""><i class="icon-camera-retro"></i> Sub Item</a></li>
+        <li><a href=""><i class="icon-coffee"></i> Sub Item</a></li>
+        <li><a href=""><i class="icon-twitter"></i> Sub Item</a></li>
+        </ul>
+    </li>
+    <li class="divider"><a href=""><i class="icon-trash"></i> li.divider</a></li>
+    </ul>
+</li>
+<li><a href="">Item 4</a></li>
+</ul>
+
+<pre class="prettyprint"><span class="tag">&lt;html&gt;</span><span class="pln">
+</span><span class="tag">&lt;head&gt;&lt;title&gt;</span><span class="pln">This is a title</span><span class="tag">&lt;/title&gt;&lt;/head&gt;</span><span class="pln">
+</span><span class="tag">&lt;body</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"subpage"</span><span class="tag">&gt;</span><span class="pln">
+    </span><span class="com">&lt;!-- Content Here --&gt;</span><span class="pln">
+</span><span class="tag">&lt;/body&gt;</span><span class="pln">
+</span><span class="tag">&lt;/html&gt;</span></pre>
+
+<div id="content"></div>
+
+<!-- Tabs Left -->
+<ul class="tabs left">
+<li><a href="#tabr1">Tab1</a></li>
+<li><a href="#tabr2">Tab2</a></li>
+<li><a href="#tabr3">Tab3</a></li>
+</ul>
+
+<div id="tabr1" class="tab-content">Tab1</div>
+<div id="tabr2" class="tab-content">Tab2</div>
+<div id="tabr3" class="tab-content">Tab3</div>
+
+<!-- Alternative Style -->
+<ul class="breadcrumbs alt1">
+<li><a href="">Home</a></li>
+<li><a href="">Category</a></li>
+<li><a href="">Sub Category</a></li>
+<li><a href="">Page Title</a></li>
+</ul>
+
+</div>
+
+
+
+<!-- Templates -->
+<script type="text/plain" id="fileListTemplate">
+    <ul>
+        <li>
+            <p class="iconic iconic-folder-fill"></p>
+            <a href="list<%= Util.dirname(App.currentFolder) %>">..</a>
+        </li>
+        <% _.each(files, function(file) { %>
+            <% if (Util.isMp3(file)) { %>
+                <li onclick="App.play(this)">
+                    <p class="iconic iconic-headphones"></p>
+                    <p class="song"><%= file %></p>
+                </li>
+            <%} else {%>
+                <li>
+                    <p class="iconic iconic-folder-fill"></p>
+                    <a href="list<%= App.currentFolder %>/<%= file %>"><%= file %></a>
+                </li>
+            <% } %>
+        <% }); %>
+    </ul>
+</script>
+
+<script type="text/javascript" src="js/lib/jquery-1.9.1_full.js"></script>
+<script type="text/javascript" src="js/lib/underscore-1.4.4_full.js"></script>
+<script type="text/javascript" src="js/lib/backbone-0.9.10_full.js"></script>
+
+<script type="text/javascript" src="js/lib/kickstart.js"></script>
+
+<script type="text/javascript" src="js/util.js"></script>
+<script type="text/javascript" src="js/class.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        console.log("Document loaded");
+        App.start();
+    });
+</script>
+</body>
+</html>
