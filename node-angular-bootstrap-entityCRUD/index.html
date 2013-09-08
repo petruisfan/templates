@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en" ng-app="blkAdm">
+<head>
+    <meta charset="utf-8">
+    <title>Block Admin</title>
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.css"/>
+    <link rel="stylesheet" href="css/bootstrap/bootstrap-responsive.css"/>
+    <link rel="stylesheet" href="css/stylesheet.css"/>
+</head>
+<body>
+    <div class="navbar navbar-inverse">
+        <div class="navbar-inner">
+            <div class="container">
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="brand" href="#/">Block Admin</a>
+
+                <ul class="nav" role="navigation">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            List
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                            <li role="presentation">
+                                <a role="menuitem" href="#/person/list">Persons</a>
+                            </li>                            
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+    <div ng-view></div>
+
+    <script type="text/javascript" src="js/lib/jquery-1.9.1_full.js"></script>
+    <script type="text/javascript" src="js/lib/bootstrap/bootstrap.js"></script>
+    <script type="text/javascript" src="js/lib/bootstrap/bootstrap-modal.js"></script>
+    <script src="js/lib/angular/angular.js"></script>
+    <script src="js/lib/angular/angular-resource.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/controllers.js"></script>
+</body>
+</html>
