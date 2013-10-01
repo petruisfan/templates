@@ -1,4 +1,5 @@
 Templates
 =========
 
-Some basic templates that I use.
+Some basic HTML app templates that I use.
+
